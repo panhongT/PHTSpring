@@ -16,7 +16,7 @@ import com.pht.framework.util.ReflectionUtil;
  */
 public final class IocHelper {
 
-    //这个静态代买块
+    //这个静态代码块会在加载IocHelper这个类的时候加载
     static {
         //获取所有的bean类与bean实例之间的映射关系，也就是BEAN MAP
         Map<Class<?>, Object> beanMap = BeanHelper.getBeanMap();

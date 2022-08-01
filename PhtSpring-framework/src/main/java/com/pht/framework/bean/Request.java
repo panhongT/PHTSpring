@@ -9,6 +9,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * @author huangyong
  * @since 1.0.0
  */
+//封装一个请求对象，获得请求方法与请求路径
 public class Request {
 
     /**

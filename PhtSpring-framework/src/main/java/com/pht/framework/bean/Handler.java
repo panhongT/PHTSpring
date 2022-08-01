@@ -8,6 +8,7 @@ import java.lang.reflect.Method;
  * @author huangyong
  * @since 1.0.0
  */
+//封装一个处理对象，获得controller类和被action注解修饰的方法
 public class Handler {
 
     /**

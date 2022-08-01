@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
  * @author huangyong
  * @since 1.0.0
  */
+//通过反射创建类对象
 public final class ReflectionUtil {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ReflectionUtil.class);

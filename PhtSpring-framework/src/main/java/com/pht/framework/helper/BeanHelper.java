@@ -12,6 +12,7 @@ import com.pht.framework.util.ReflectionUtil;
  * @author huangyong
  * @since 1.0.0
  */
+//管理通过反射创建的类与类对象
 public final class BeanHelper {
 
     private static final Map<Class<?>, Object> BEAN_MAP = new HashMap<Class<?>, Object>();
