@@ -26,7 +26,7 @@ public final class ControllerHelper {
         Set<Class<?>> controllerClassSet = ClassHelper.getControllerClassSet();
         if (CollectionUtil.isNotEmpty(controllerClassSet)) {//如果controller类不为空
             for (Class<?> controllerClass : controllerClassSet) {
-                //获得类中所有的方法
+                //获得被注解@Controller修饰类中所有的方法
                 Method[] methods = controllerClass.getDeclaredMethods();
                 if (ArrayUtil.isNotEmpty(methods)) {//如果方法不为空
                     for (Method method : methods) {

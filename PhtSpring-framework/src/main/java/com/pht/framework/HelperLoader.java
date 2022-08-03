@@ -13,6 +13,7 @@ import com.pht.framework.helper.IocHelper;
  * @author huangyong
  * @since 1.0.0
  */
+//用于加载ClassHelper、BeanHelper、IocHelper、ControllerHelper
 public final class HelperLoader {
 
     public static void init() {
