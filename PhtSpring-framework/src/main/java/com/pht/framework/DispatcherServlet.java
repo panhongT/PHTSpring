@@ -120,7 +120,7 @@ public class DispatcherServlet extends HttpServlet {
     }
 
     /**
-     * 此方法有@ResponseBody的效果,即将数据转换为Json，因此使用者不需要加，当然这样可能就有点被局限了，也可以抽取个注解出来，不难
+     * 此方法有@ResponseBody的效果,即将数据转换为Json，因此使用者不需要加，当然这样可能就有点被局限了，也可以抽取个注解出来
      * @param data
      * @param response
      * @throws IOException
