@@ -86,7 +86,8 @@ public final class ClassHelper {
     /**
      * 获取应用包名下带有某注解的所有类
      */
-    public static Set<Class<?>> getClassSetByAnnotation(Class<? extends Annotation> annotationClass) {
+    public static Set<Class<?>> getClassSetByAnnotation(Class<? extends Annotation>
+                                                                annotationClass) {
         Set<Class<?>> classSet = new HashSet<Class<?>>();
         for (Class<?> cls : CLASS_SET) {
             if (cls.isAnnotationPresent(annotationClass)) {
