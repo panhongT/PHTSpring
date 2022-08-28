@@ -87,12 +87,12 @@ public final class DatabaseHelper {
         Connection conn = getConnection();
         if (conn != null) {
             try {
-                conn.setAutoCommit(false);
+                conn.setAutoCommit(false);//默认事务是自动提交的
             } catch (SQLException e) {
                 LOGGER.error("begin transaction failure", e);
                 throw new RuntimeException(e);
             } finally {
-                CONNECTION_HOLDER.set(conn);
+                CONNECTION_HOLDER.set(conn);//开启事务后需要将connection对象放入本地线程变量中
             }
         }
     }
@@ -104,13 +104,13 @@ public final class DatabaseHelper {
         Connection conn = getConnection();
         if (conn != null) {
             try {
-                conn.commit();
+                conn.commit();//事务提交
                 conn.close();
             } catch (SQLException e) {
                 LOGGER.error("commit transaction failure", e);
                 throw new RuntimeException(e);
             } finally {
-                CONNECTION_HOLDER.remove();
+                CONNECTION_HOLDER.remove();//当事务提交或者回滚之后，需要移除本地线程变量中的connection对象
             }
         }
     }

@@ -9,8 +9,9 @@ import com.pht.framework.annotation.Transaction;
 
 /**
  * 事务代理
+ * 编写事务代理切面
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 public class TransactionProxy implements Proxy {

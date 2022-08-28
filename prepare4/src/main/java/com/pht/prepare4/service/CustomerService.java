@@ -52,4 +52,5 @@ public class CustomerService {
     public boolean deleteCustomer(long id) {
         return DatabaseHelper.deleteEntity(Customer.class, id);
     }
+    //可以理解为凡是对数据库有变更的方法都建议带上Transaction注解
 }
