@@ -11,7 +11,9 @@ import org.slf4j.LoggerFactory;
 /**
  * Servlet 助手类
  *
- * @author huangyong
+ * 封装request和response对象，利用threadlocal来保证线程安全，达到controller和servlet的解耦
+ * 其实service也可以调用，因为所有的调用都来自于同一个请求线程，DispatcherServlet是请求线程的入口，随后请求会来到controller和service
+ * @author pht
  * @since 1.0.0
  */
 public final class ServletHelper {

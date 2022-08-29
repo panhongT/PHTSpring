@@ -98,7 +98,7 @@ public class DispatcherServlet extends HttpServlet {
                     handleDataResult((Data) result, response);//传Json数据给前端
                 }
             }
-        } finally {
+        } finally {//调用获取销毁方法
             ServletHelper.destroy();
         }
     }
