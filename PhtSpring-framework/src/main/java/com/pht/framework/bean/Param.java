@@ -12,7 +12,7 @@ import com.pht.framework.util.StringUtil;
 /**
  * 请求参数对象
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 public class Param {
@@ -40,6 +40,7 @@ public class Param {
                 String fieldName = formParam.getFieldName();
                 Object fieldValue = formParam.getFieldValue();
                 if (fieldMap.containsKey(fieldName)) {
+                    //对于同名的请求参数，通过一个特殊的分隔符进行处理
                     fieldValue = fieldMap.get(fieldName) + StringUtil.SEPARATOR + fieldValue;
                 }
                 fieldMap.put(fieldName, fieldValue);
@@ -58,6 +59,7 @@ public class Param {
                 String fieldName = fileParam.getFieldName();
                 List<FileParam> fileParamList;
                 if (fileMap.containsKey(fieldName)) {
+                    //对于同名的上传文件，通过一个List进行了封装
                     fileParamList = fileMap.get(fieldName);
                 } else {
                     fileParamList = new ArrayList<FileParam>();
@@ -88,7 +90,7 @@ public class Param {
     }
 
     /**
-     * 验证参数是否为空
+     * 验证参数是否为空，如果参数为空则可以不上传给Action方法
      */
     public boolean isEmpty() {
         return CollectionUtil.isEmpty(formParamList) && CollectionUtil.isEmpty(fileParamList);

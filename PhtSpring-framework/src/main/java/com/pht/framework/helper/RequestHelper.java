@@ -15,7 +15,7 @@ import com.pht.framework.util.StringUtil;
 /**
  * 请求助手类
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 public final class RequestHelper {

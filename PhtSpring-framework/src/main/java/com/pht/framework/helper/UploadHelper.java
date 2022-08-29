@@ -29,12 +29,16 @@ import com.pht.framework.util.StringUtil;
 /**
  * 文件上传助手类
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 public final class UploadHelper {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UploadHelper.class);
+
+    /**
+     *apache commons fileupload提供的Servelet文件上传对象
+     */
 
     private static ServletFileUpload servletFileUpload;
 
@@ -71,10 +75,10 @@ public final class UploadHelper {
                     List<FileItem> fileItemList = fileItemListEntry.getValue();
                     if (CollectionUtil.isNotEmpty(fileItemList)) {
                         for (FileItem fileItem : fileItemList) {
-                            if (fileItem.isFormField()) {
+                            if (fileItem.isFormField()) {//判断是否为普通表单字段
                                 String fieldValue = fileItem.getString("UTF-8");
-                                formParamList.add(new FormParam(fieldName, fieldValue));
-                            } else {
+                                formParamList.add(new FormParam(fieldName, fieldValue));//如果是，则创建formparam对象
+                            } else {//否则，就是文件上传字段，通过FileUtil来获取真实的上传文件名
                                 String fileName = FileUtil.getRealFileName(new String(fileItem.getName().getBytes(), "UTF-8"));
                                 if (StringUtil.isNotEmpty(fileName)) {
                                     long fileSize = fileItem.getSize();
@@ -91,7 +95,7 @@ public final class UploadHelper {
             LOGGER.error("create param failure", e);
             throw new RuntimeException(e);
         }
-        return new Param(formParamList, fileParamList);
+        return new Param(formParamList, fileParamList);//构造param对象并返回
     }
 
     /**

@@ -30,7 +30,7 @@ import com.pht.framework.helper.UploadHelper;
 /**
  * 请求转发器
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 //@WebServlet 用于将一个类声明为 Servlet，该注解会在部署时被容器处理，容器根据其具体的属性配置将相应的类部署为 Servlet。该注解具有下表给出的一些常用属性。
@@ -45,7 +45,7 @@ public class DispatcherServlet extends HttpServlet {
         ServletContext servletContext = servletConfig.getServletContext();
 
         registerServlet(servletContext);
-
+        //调用文件上传的init方法
         UploadHelper.init(servletContext);
     }
 
@@ -86,6 +86,7 @@ public class DispatcherServlet extends HttpServlet {
                 Method actionMethod = handler.getActionMethod();
                 //根据参数的不同，利用反射调用真正的action方法并获得返回值
                 if (param.isEmpty()) {
+                    //当注解里面的参数为空的时候可以不传入Action方法中
                     result = ReflectionUtil.invokeMethod(controllerBean, actionMethod);
                 } else {
                     result = ReflectionUtil.invokeMethod(controllerBean, actionMethod, param);
