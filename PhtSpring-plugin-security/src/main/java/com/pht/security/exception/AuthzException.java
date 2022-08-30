@@ -3,7 +3,7 @@ package com.pht.security.exception;
 /**
  * 授权异常（当权限无效时抛出）
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 public class AuthzException extends RuntimeException {

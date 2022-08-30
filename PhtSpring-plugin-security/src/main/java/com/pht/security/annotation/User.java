@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * 判断当前用户是否已登录（包括：已认证 与 已记住）
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 @Target({ElementType.TYPE, ElementType.METHOD})

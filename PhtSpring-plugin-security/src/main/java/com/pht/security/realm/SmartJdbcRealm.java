@@ -1,9 +1,10 @@
 package com.pht.security.realm;
 
+import com.pht.framework.helper.DatabaseHelper;
 import com.pht.security.SecurityConfig;
 import com.pht.security.password.Md5CredentialsMatcher;
 import org.apache.shiro.realm.jdbc.JdbcRealm;
-import org.smart4j.framework.helper.DatabaseHelper;
+
 
 /**
  * 基于 Smart 的 JDBC Realm（需要提供相关 smart.plugin.security.jdbc.* 配置项）

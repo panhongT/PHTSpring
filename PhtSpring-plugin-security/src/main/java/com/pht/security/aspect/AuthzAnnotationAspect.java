@@ -3,13 +3,13 @@ package com.pht.security.aspect;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 
+import com.pht.framework.annotation.Aspect;
+import com.pht.framework.annotation.Controller;
+import com.pht.framework.proxy.AspectProxy;
 import com.pht.security.exception.AuthzException;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
-import org.smart4j.framework.annotation.Aspect;
-import org.smart4j.framework.annotation.Controller;
-import org.smart4j.framework.proxy.AspectProxy;
 import com.pht.security.annotation.Authenticated;
 import com.pht.security.annotation.Guest;
 import com.pht.security.annotation.HasPermissions;
@@ -19,7 +19,7 @@ import com.pht.security.annotation.User;
 /**
  * 授权注解切面
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 @Aspect(Controller.class)

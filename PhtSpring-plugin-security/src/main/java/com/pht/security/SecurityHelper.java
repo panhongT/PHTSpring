@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Security 助手类
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 public final class SecurityHelper {

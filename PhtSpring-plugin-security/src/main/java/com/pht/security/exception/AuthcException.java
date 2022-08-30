@@ -3,7 +3,7 @@ package com.pht.security.exception;
 /**
  * 认证异常（当非法访问时抛出）
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 public class AuthcException extends Exception {

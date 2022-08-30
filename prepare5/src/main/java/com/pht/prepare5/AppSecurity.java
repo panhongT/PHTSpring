@@ -7,7 +7,7 @@ import com.pht.security.SmartSecurity;
 /**
  * 应用安全控制
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 public class AppSecurity implements SmartSecurity {

@@ -12,7 +12,7 @@ import java.util.Set;
  *     <li>smart.security.jdbc.permissions_query：根据角色名获取权限名集合</li>
  * </ul>
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 public interface SmartSecurity {
