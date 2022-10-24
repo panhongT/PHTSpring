@@ -54,6 +54,7 @@ public final class DatabaseHelper {
      * 获取数据库连接
      */
     public static Connection getConnection() {
+        //先从threadlocal中取，如果没有就创建一个新的connection并且放入threadLocal中
         Connection conn = CONNECTION_HOLDER.get();
         if (conn == null) {
             try {
