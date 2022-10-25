@@ -7,7 +7,7 @@ import com.pht.framework.util.PropsUtil;
 /**
  * 属性文件助手类
  *
- * @author huangyong
+ * @author panhongting
  * @since 1.0.0
  */
 public final class ConfigHelper {
