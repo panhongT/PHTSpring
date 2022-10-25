@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 类操作工具类
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 public final class ClassUtil {
