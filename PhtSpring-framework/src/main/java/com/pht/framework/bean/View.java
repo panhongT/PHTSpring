@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * 返回视图对象
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 public class View {

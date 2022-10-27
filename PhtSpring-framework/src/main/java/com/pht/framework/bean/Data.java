@@ -3,7 +3,7 @@ package com.pht.framework.bean;
 /**
  * 返回数据对象
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 public class Data {
