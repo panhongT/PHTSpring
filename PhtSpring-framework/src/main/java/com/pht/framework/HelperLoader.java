@@ -10,7 +10,7 @@ import com.pht.framework.helper.IocHelper;
 /**
  * 加载相应的 Helper 类
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 //用于加载ClassHelper、BeanHelper、IocHelper、ControllerHelper
