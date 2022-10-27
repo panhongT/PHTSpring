@@ -6,7 +6,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 /**
  * 封装请求信息
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 //封装一个请求对象，获得请求方法与请求路径

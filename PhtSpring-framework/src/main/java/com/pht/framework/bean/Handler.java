@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 /**
  * 封装 Action 信息
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 //封装一个处理对象，获得controller类和被action注解修饰的方法
