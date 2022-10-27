@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * Action 方法注解
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 @Target(ElementType.METHOD)
