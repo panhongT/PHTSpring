@@ -9,14 +9,14 @@ import com.pht.framework.util.ReflectionUtil;
 /**
  * Bean 助手类
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 //管理通过反射创建的类与类对象
 public final class BeanHelper {
 
     private static final Map<Class<?>, Object> BEAN_MAP = new HashMap<Class<?>, Object>();
-
+    //静态代码块中获取了所有的类并通过反射创建映射关系
     static {
         Set<Class<?>> beanClassSet = ClassHelper.getBeanClassSet();
         for (Class<?> beanClass : beanClassSet) {
