@@ -13,7 +13,7 @@ import com.pht.framework.util.CollectionUtil;
 /**
  * 控制器助手类
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 public final class ControllerHelper {
@@ -35,6 +35,7 @@ public final class ControllerHelper {
                             Action action = method.getAnnotation(Action.class);
                             String mapping = action.value();
                             //验证url映射规则
+                            //因为value值得组成类似于（"get:/customer_show"），所以通过以下的做法能分离出请求方式和路径
                             if (mapping.matches("\\w+:/\\w*")) {
                                 String[] array = mapping.split(":");
                                 if (ArrayUtil.isNotEmpty(array) && array.length == 2) {
@@ -42,7 +43,9 @@ public final class ControllerHelper {
                                     String requestMethod = array[0];
                                     //获取请求路径
                                     String requestPath = array[1];
+                                    //request放的是请求方式、请求路径——也就是请求信息
                                     Request request = new Request(requestMethod, requestPath);
+                                    //handler放的是controller类的信息、哪个方法——也就是处理对象的信息
                                     Handler handler = new Handler(controllerClass, method);
                                     //初始化ACTION_MAP
                                     ACTION_MAP.put(request, handler);
