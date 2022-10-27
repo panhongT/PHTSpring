@@ -10,8 +10,9 @@ import com.pht.framework.annotation.Service;
 
 /**
  * 类操作助手类
- *
- * @author huangyong
+ * 这个类与classUtil不同的是这个是获取带注解的类获得的是一个类集合，而classUtil则是将应用包下的类都加载进JVM
+ * 所以在classUtil也会有获取类，但是获取的是包下所有的类，这个是可以提供获取有注解的类，获取类的时候也用到了classUtil的方法
+ * @author pht
  * @since 1.0.0
  */
 //获取所有带有注解的类
@@ -21,7 +22,7 @@ public final class ClassHelper {
      * 定义类集合（用于存放所加载的类）
      */
     private static final Set<Class<?>> CLASS_SET;
-
+    //静态代码块中先通过ClassUntil获取了所有的类
     static {
         String basePackage = ConfigHelper.getAppBasePackage();
         CLASS_SET = ClassUtil.getClassSet(basePackage);

@@ -24,6 +24,7 @@ public final class ClassUtil {
 
     /**
      * 获取类加载器
+     * 只需要获得当前线程中的class Loader即可
      */
     public static ClassLoader getClassLoader() {
         return Thread.currentThread().getContextClassLoader();
@@ -54,9 +55,12 @@ public final class ClassUtil {
      * 获取指定包名下的所有类
      */
     public static Set<Class<?>> getClassSet(String packageName) {
+        //所有的类放在一个hashset里面
         Set<Class<?>> classSet = new HashSet<Class<?>>();
         try {
+            //用类加载器去得到包名并转换为路径
             Enumeration<URL> urls = getClassLoader().getResources(packageName.replace(".", "/"));
+            //根据路径与包名去把类放入set中
             while (urls.hasMoreElements()) {
                 URL url = urls.nextElement();
                 if (url != null) {
@@ -91,6 +95,7 @@ public final class ClassUtil {
     }
 
     private static void addClass(Set<Class<?>> classSet, String packagePath, String packageName) {
+        //获取类名
         File[] files = new File(packagePath).listFiles(new FileFilter() {
             public boolean accept(File file) {
                 return (file.isFile() && file.getName().endsWith(".class")) || file.isDirectory();
@@ -103,6 +108,7 @@ public final class ClassUtil {
                 if (StringUtil.isNotEmpty(packageName)) {
                     className = packageName + "." + className;
                 }
+                //通过上面的加载类的方法去加载类
                 doAddClass(classSet, className);
             } else {
                 String subPackagePath = fileName;
