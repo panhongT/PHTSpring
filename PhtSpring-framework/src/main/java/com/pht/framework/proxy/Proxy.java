@@ -3,7 +3,7 @@ package com.pht.framework.proxy;
 /**
  * 代理接口
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 public interface Proxy {
