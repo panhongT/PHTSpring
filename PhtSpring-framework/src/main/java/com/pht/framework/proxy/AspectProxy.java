@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
  */
     //用于调用proxyManager
     //提供一个模板方法，并在该抽象类的具体实现中扩展相应的抽象方法
+    //实现了Proxy接口
 public abstract class AspectProxy implements Proxy {
 
     private static final Logger logger = LoggerFactory.getLogger(AspectProxy.class);
@@ -27,6 +28,7 @@ public abstract class AspectProxy implements Proxy {
 
         begin();
         try {
+            //如果代理链不为空
             if (intercept(cls, method, params)) {
                 before(cls, method, params);
                 result = proxyChain.doProxyChain();
