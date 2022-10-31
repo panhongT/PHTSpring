@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 切面代理
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
     //用于调用proxyManager
