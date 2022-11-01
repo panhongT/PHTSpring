@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
  * 定义需要事务控制的方法
  * 实现事务控制特性
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 @Target(ElementType.METHOD)
