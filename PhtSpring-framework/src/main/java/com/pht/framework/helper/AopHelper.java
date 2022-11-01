@@ -68,6 +68,7 @@ public final class AopHelper {
      * @param proxyMap
      */
     private static void addTransactionProxy(Map<Class<?>, Set<Class<?>>> proxyMap) {
+        //这里是把Service类下所有的方法都拦截了，所以只需要把Service类获取到就行
         Set<Class<?>> serviceClassSet = ClassHelper.getClassSetByAnnotation(Service.class);
         proxyMap.put(TransactionProxy.class, serviceClassSet);
     }
