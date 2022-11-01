@@ -30,7 +30,7 @@ import com.pht.framework.util.CollectionUtil;
 /**
  * 数据库操作助手类
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 public final class DatabaseHelper {
