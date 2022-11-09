@@ -1,12 +1,13 @@
 package com.pht.security;
 
-import org.smart4j.framework.helper.ConfigHelper;
-import org.smart4j.framework.util.ReflectionUtil;
+
+import com.pht.framework.helper.ConfigHelper;
+import com.pht.framework.util.ReflectionUtil;
 
 /**
  * 从配置文件中获取相关属性
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 public final class SecurityConfig {
