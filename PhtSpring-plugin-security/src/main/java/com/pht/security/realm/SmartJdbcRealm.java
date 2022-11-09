@@ -9,7 +9,7 @@ import org.apache.shiro.realm.jdbc.JdbcRealm;
 /**
  * 基于 Smart 的 JDBC Realm（需要提供相关 smart.plugin.security.jdbc.* 配置项）
  *
- * @author huangyong
+ * @author pht
  * @since 1.0.0
  */
 public class SmartJdbcRealm extends JdbcRealm {
