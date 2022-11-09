@@ -10,7 +10,7 @@ import org.apache.shiro.web.env.EnvironmentLoaderListener;
 /**
  * Smart Security 插件
  *
- * @author huangyong
+ * @author Pht
  * @since 1.0.0
  */
 public class SmartSecurityPlugin implements ServletContainerInitializer {
