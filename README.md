@@ -187,7 +187,6 @@ ShiroFilter用来拦截客户端请求，获取url与shiro.ini的相关配置项
 
 3.实现ServletContainerInitializer接口(也由SmartSecurityPlugin实现)，并在classpath下的META-INF/services/javax.servlet.ServletContainerInitializer下添加需要初始化的类(如org.smart4j.security.SmartSecurityPlugin)，使Web应用初始化时就完成2的操作
 
-4.创建表：RBAC模型
 
 - 认证部分类简介
 
